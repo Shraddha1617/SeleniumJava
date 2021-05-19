@@ -1,0 +1,83 @@
+ 
+ in config.properties
+ we use highlight
+ highlight the element
+ how you will highlight the element means which utility you will use
+ Javascript utility
+ 
+ highlight = true---> it will highlight the element
+ 
+ remote = true ---> means execute your test cases on selenium grid 
+ selenium grid could be hosted on any server like local, AWS or cloud also
+ 
+ 
+ In "Page" classes (like LoginPage.java) 
+ whenever you are creating a page or a feature for that page so the feature have been writen in
+ page classes 
+ feature in the form of methods
+ like doLogin
+ just perform some action or feature in the form of page action or page method we have to write
+ we should never assert inside the page class
+ page class is not responsible for any validation
+ Page class give you the behaviour of the application/ behaviour of the object, webelement 
+ its your TestNG(Test class) responsibility to do the assertion 
+ 
+ Inside the "Test" Class
+ we never use driver API like driver.findElement, wedriver utility or wait
+ TestNG class just call the respective methods and assert it 
+ 
+ SRB--->Single Responsiblity pattern says we should have the component or seperate class 
+ in terms of java
+ we should have a seperate class to handle a specific scenario/feature
+ 
+ Thread Local:
+ to manage the thread
+ you have multiple tcs
+ u genertaed 3 thread means 3 threads (browser) will be open at one time
+ 
+ XML file
+ Test block we write and it is based on our Test classes
+ suppose we are having 3 Test page classes then in xml we have to write the 3 test block
+ thread-count = 3 means 3 browser will be open in a parallel mode
+ 
+ <parameter name="browser" value="chrome" />
+ this is we are reading in BaseTest	 
+ 
+ maven-compiler-plugin---> used to compile the code 
+ whatever code we have written inside the src/main/java and src/test/java it will check
+ is everything is fine or not
+ 
+ maven-surefire-plugin---> used to run the code which is inside the src/test/java
+ 
+ 
+ pom.xml is always available root of the project
+ command---> mvn clean install
+ this command go to the pom.xml file with the maven-compiler-plugin first it will compile the entire code
+ and once compilation is done it will pick the test cases with the help of maven-surefire-plugin
+ it will go to perticular xml file 
+ 
+ mvn clean install -D (-D is used in maven to provide the env variable)
+ mvn clean install -Denv="qa"
+ 
+ Listner is a testNG feature
+ it is a parallel activity which is going on along with your execution  from the testng 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
